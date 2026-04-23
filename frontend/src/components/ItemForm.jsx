@@ -33,10 +33,10 @@ const ItemForm = ({ initialData = {}, onSubmit, submitLabel = 'Submit', loading 
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-16">
       {/* Item Name */}
       <div>
-        <label className="block text-sm font-medium text-slate-300 mb-2" htmlFor="itemName">
+        <label className="block text-sm font-medium text-slate-300 mb-2 p-5" htmlFor="itemName" >
           Item Name <span className="text-rose-400">*</span>
         </label>
         <input
@@ -58,11 +58,10 @@ const ItemForm = ({ initialData = {}, onSubmit, submitLabel = 'Submit', loading 
         </label>
         <div className="flex gap-3">
           <label
-            className={`flex-1 text-center py-3 rounded-xl cursor-pointer transition-all font-medium text-sm border ${
-              formData.type === 'Lost'
+            className={`flex-1 text-center py-3 rounded-xl cursor-pointer transition-all font-medium text-sm border ${formData.type === 'Lost'
                 ? 'bg-rose-500/20 border-rose-500/50 text-rose-400'
                 : 'bg-slate-800/50 border-slate-700/50 text-slate-400 hover:border-slate-600'
-            }`}
+              }`}
           >
             <input
               type="radio"
@@ -75,11 +74,10 @@ const ItemForm = ({ initialData = {}, onSubmit, submitLabel = 'Submit', loading 
             🔴 Lost
           </label>
           <label
-            className={`flex-1 text-center py-3 rounded-xl cursor-pointer transition-all font-medium text-sm border ${
-              formData.type === 'Found'
+            className={`flex-1 text-center py-3 rounded-xl cursor-pointer transition-all font-medium text-sm border ${formData.type === 'Found'
                 ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400'
                 : 'bg-slate-800/50 border-slate-700/50 text-slate-400 hover:border-slate-600'
-            }`}
+              }`}
           >
             <input
               type="radio"
@@ -178,3 +176,6 @@ const ItemForm = ({ initialData = {}, onSubmit, submitLabel = 'Submit', loading 
 };
 
 export default ItemForm;
+
+
+

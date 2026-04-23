@@ -23,26 +23,34 @@ const AddItem = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-8">
+    <div className="max-w-2xl mx-auto px-6 lg:px-8 py-10">
       <div className="animate-fade-in">
+
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2">Report an Item</h1>
-          <p className="text-slate-400">Fill in the details of the lost or found item</p>
+        <div className="mb-10 space-y-1">
+          <h1 className="text-3xl font-bold text-white tracking-tight">
+            Report an Item
+          </h1>
+          <p className="text-sm text-slate-400">
+            Fill in the details of the lost or found item
+          </p>
         </div>
 
         {/* Form Card */}
-        <div className="glass-card p-8">
+        <div className="glass-card p-6 sm:p-8 rounded-2xl">
+          
           {error && (
-            <div className="alert-error" id="add-item-error">
+            <div className="alert-error mb-6" id="add-item-error">
               {error}
             </div>
           )}
+
           <ItemForm
             onSubmit={handleSubmit}
             submitLabel="Report Item"
             loading={loading}
           />
+
         </div>
       </div>
     </div>
